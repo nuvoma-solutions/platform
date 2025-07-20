@@ -167,16 +167,14 @@ const Hero = () => (
                         variants={titleVariants}
                     >
                         <h1
-                            className="tracking-tighter leading-none bg-clip-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-transparent font-bold mx-auto"
+                            className="font-neulisAlt tracking-tighter leading-none bg-clip-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-transparent font-bold font-neulisalt mx-auto"
                             style={{
                                 backgroundImage: "linear-gradient(179.1deg, #FFFFFF 0.77%, rgba(255, 255, 255, 0) 182.09%)",
-                                fontFamily: "Neulis Alt, sans-serif",
                             }}
                         >
                             Finally, software consulting that works
                             <motion.span
-                                className="font-extrabold bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent"
-                                style={{ fontFamily: "Neulis, sans-serif" }}
+                                className="font-neulis font-extrabold bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent"
                                 animate={{
                                     backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                                 }}

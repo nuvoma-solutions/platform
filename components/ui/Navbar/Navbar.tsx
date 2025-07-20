@@ -77,26 +77,52 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Floating Pill */}
+            {/* Mobile Floating Pill - iOS Optimized */}
             <div className="lg:hidden">
-                {/* Floating Pill Header - Enhanced with more blur and opacity */}
-                <div className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-700 ease-out ${isScrolled ? 'w-[85%] scale-95' : 'w-[90%] scale-100'}`}>
-                    <div className="backdrop-blur-xl bg-gray-900/70 border border-gray-700/30 rounded-4xl px-8 py-0 shadow-2xl ring-1 ring-white/10">
+                {/* Floating Pill Header - Optimized for iPhone */}
+                <div
+                    className="fixed top-4 left-1/2 z-50"
+                    style={{
+                        transform: 'translateX(-50%)',
+                        width: isScrolled ? '85%' : '90%',
+                        transition: 'width 500ms cubic-bezier(0.4, 0, 0.2, 1)',
+                        willChange: 'width'
+                    }}
+                >
+                    <div
+                        className="bg-gray-900/70 border border-gray-700/30 rounded-4xl px-8 py-0 shadow-2xl ring-1 ring-white/10"
+                        style={{
+                            backdropFilter: 'blur(20px)',
+                            WebkitBackdropFilter: 'blur(20px)',
+                            transition: 'all 400ms cubic-bezier(0.4, 0, 0.2, 1)',
+                            willChange: 'transform'
+                        }}
+                    >
                         <NavHeader menuBtnEl={menuBtnEl} state={state} onClick={() => setState(!state)} />
                     </div>
                 </div>
 
-                {/* Mobile Dropdown Menu - Enhanced with stronger blur and opacity effects */}
+                {/* Mobile Dropdown Menu - iOS Optimized */}
                 <div className={`
-                    fixed top-24 left-1/2 transform -translate-x-1/2 w-[90%] z-40
-                    transition-all duration-300 ease-in-out
+                    fixed top-24 left-1/2 w-[90%] z-40
+                    transition-all duration-300 ease-out
                     ${state ?
-                    'opacity-100 translate-y-0 scale-100' :
-                    'opacity-0 -translate-y-4 scale-95 pointer-events-none'
+                    'opacity-100 translate-y-0' :
+                    'opacity-0 -translate-y-4 pointer-events-none'
                 }
-                `}>
-                    {/* Background with blur and semi-transparent overlay */}
-                    <div className="absolute inset-0 rounded-2xl backdrop-blur-xl bg-gray-900/70 border border-gray-700/40 shadow-2xl ring-1 ring-white/5"></div>
+                `}
+                     style={{
+                         transform: `translateX(-50%) ${state ? 'translateY(0)' : 'translateY(-1rem)'}`,
+                         willChange: 'opacity, transform'
+                     }}>
+                    {/* Background with optimized blur for iOS */}
+                    <div
+                        className="absolute inset-0 rounded-2xl bg-gray-900/70 border border-gray-700/40 shadow-2xl ring-1 ring-white/5"
+                        style={{
+                            backdropFilter: 'blur(20px)',
+                            WebkitBackdropFilter: 'blur(20px)'
+                        }}
+                    ></div>
 
                     <div className="relative p-4">
                         <div className="text-gray-300">
@@ -113,12 +139,17 @@ const Navbar = () => {
                                             }
                                             `}
                                             style={{
-                                                transitionDelay: state ? `${idx * 50 + 100}ms` : '0ms'
+                                                transitionDelay: state ? `${idx * 50 + 100}ms` : '0ms',
+                                                willChange: 'opacity, transform'
                                             }}
                                         >
                                             <Link
                                                 href={item.href}
-                                                className="block font-semibold text-lg py-2 px-2 hover:bg-white/10 backdrop-blur-sm rounded-lg transition-all duration-200 border border-transparent hover:border-white/20"
+                                                className="font-neulis block font-semibold text-lg py-2 px-2 hover:bg-white/10 rounded-lg transition-all duration-200 border border-transparent hover:border-white/20"
+                                                style={{
+                                                    backdropFilter: 'blur(10px)',
+                                                    WebkitBackdropFilter: 'blur(10px)'
+                                                }}
                                                 onClick={() => setState(false)}
                                             >
                                                 {item.name}
@@ -129,18 +160,23 @@ const Navbar = () => {
                             </ul>
                             <div className={`
                                 mt-6 mb-2 space-y-3
-                                transition-all duration-300 ease-in-out
+                                transition-all duration-300 ease-out
                                 ${state ?
                                 'opacity-100 translate-y-0' :
                                 'opacity-0 translate-y-2'
                             }
                             `}
                                  style={{
-                                     transitionDelay: state ? '250ms' : '0ms'
+                                     transitionDelay: state ? '250ms' : '0ms',
+                                     willChange: 'opacity, transform'
                                  }}>
                                 <NavLink
                                     href=""
-                                    className="flex items-center justify-center gap-x-1 text-sm text-white font-medium custom-btn-bg border border-gray-500 active:bg-gray-900 transition-all duration-200 hover:scale-105 w-full py-3 rounded-lg backdrop-blur-sm hover:bg-white/20"
+                                    className="flex items-center justify-center gap-x-1 text-sm text-white font-medium custom-btn-bg border border-gray-500 active:bg-gray-900 transition-all duration-200 hover:scale-105 w-full py-3 rounded-lg hover:bg-white/20"
+                                    style={{
+                                        backdropFilter: 'blur(10px)',
+                                        WebkitBackdropFilter: 'blur(10px)'
+                                    }}
                                     onClick={() => setState(false)}
                                 >
                                     Start now
@@ -153,12 +189,17 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                {/* Mobile Backdrop - Enhanced with stronger blur */}
+                {/* Mobile Backdrop - iOS Optimized */}
                 <div className={`
-                    fixed inset-0 bg-black/30 backdrop-blur-md z-30
+                    fixed inset-0 bg-black/30 z-30
                     transition-opacity duration-300
                     ${state ? 'opacity-100' : 'opacity-0 pointer-events-none'}
                 `}
+                     style={{
+                         backdropFilter: 'blur(8px)',
+                         WebkitBackdropFilter: 'blur(8px)',
+                         willChange: 'opacity'
+                     }}
                      onClick={() => setState(false)}
                 />
             </div>
