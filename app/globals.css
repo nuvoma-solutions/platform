@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+    --font-neulis: 'Neulis', sans-serif;
+    --font-neulisalt: 'NeulisAlt', sans-serif;
+}
+
+.custom-screen {
+    @apply max-w-screen-xl mx-auto px-4;
+}
+
+.custom-btn-bg {
+    background: radial-gradient(67.5% 67.5% at 50% 50%, #4B5563 0%, rgba(75, 85, 99, 0) 100%)
+}
+
+.custom-btn-bg:hover {
+    background: radial-gradient(118.75% 118.75% at 50% 50%, #4B5563 0%, rgba(75, 85, 99, 0) 100%);
+}
+
+.font-neulis {
+    font-family: var(--font-neulis);
+}
+
+.font-neulisalt {
+    font-family: var(--font-neulisalt);
+}
