@@ -66,8 +66,8 @@ export default function MarqueeImageSlider({
         <div className="w-full py-2">
             <div className="relative overflow-hidden">
                 {/* Fade edges */}
-                <div className="absolute left-0 top-0 bottom-0 w-24 md:w-96 bg-gradient-to-r from-gray-900 via-gray-900/90 via-30% via-gray-900/50 to-transparent z-10 pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-24 md:w-96 bg-gradient-to-l from-gray-900 via-gray-900/90 via-30% via-gray-900/50 to-transparent z-10 pointer-events-none" />
+                <div className="absolute left-0 top-0 bottom-0 w-8 md:w-96 bg-gradient-to-r from-gray-900 via-gray-900/90 via-30% via-gray-900/50 to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-8 md:w-96 bg-gradient-to-l from-gray-900 via-gray-900/90 via-30% via-gray-900/50 to-transparent z-10 pointer-events-none" />
                 <div className="flex">
                     <motion.div
                         className="flex gap-4 flex-shrink-0"

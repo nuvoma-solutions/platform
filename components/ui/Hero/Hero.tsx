@@ -167,7 +167,7 @@ const Hero = () => (
                         variants={titleVariants}
                     >
                         <h1
-                            className="font-neulisAlt tracking-tighter leading-none bg-clip-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-transparent font-bold font-neulisalt mx-auto"
+                            className="font-neulisAlt tracking-tighter leading-none bg-clip-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-transparent font-extrabold md:font-bold font-neulisalt mx-auto"
                             style={{
                                 backgroundImage: "linear-gradient(179.1deg, #FFFFFF 0.77%, rgba(255, 255, 255, 0) 182.09%)",
                             }}
