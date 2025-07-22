@@ -10,10 +10,10 @@ const Navbar = () => {
     const menuBtnEl = useRef(null)
 
     const navigation = [
-        { name: "Features", href: "/#features" },
-        { name: "Pricing", href: "/#pricing" },
-        { name: "Testimonials", href: "/#testimonials" },
-        { name: "The Team", href: "/#team" },
+        { name: "Services", href: "/#features", subtitle: "An overview of our products, services, and other features." },
+        { name: "Pricing", href: "/#pricing", subtitle: "Explore our flexible pricing offers for your business needs." },
+        { name: "Testimonials", href: "/#testimonials", subtitle: "Hear firsthand from our clients on their experiences with us." },
+        { name: "The Team", href: "/#team", subtitle: "Learn more about the driven people powering our platform." },
     ]
 
     useEffect(() => {
@@ -126,7 +126,7 @@ const Navbar = () => {
 
                     <div className="relative p-4">
                         <div className="text-gray-300">
-                            <ul className="space-y-4">
+                            <ul className="space-y-0">
                                 {navigation.map((item, idx) => {
                                     return (
                                         <li
@@ -145,14 +145,21 @@ const Navbar = () => {
                                         >
                                             <Link
                                                 href={item.href}
-                                                className="font-neulis block font-semibold text-lg py-2 px-2 hover:bg-white/10 rounded-lg transition-all duration-200 border border-transparent hover:border-white/20"
+                                                className="font-neulis block py-3 px-3 hover:bg-white/10 rounded-lg transition-all duration-200 border border-transparent hover:border-white/20"
                                                 style={{
                                                     backdropFilter: 'blur(10px)',
                                                     WebkitBackdropFilter: 'blur(10px)'
                                                 }}
                                                 onClick={() => setState(false)}
                                             >
-                                                {item.name}
+                                                <div className="font-semibold text-lg text-gray-100">
+                                                    {item.name}
+                                                </div>
+                                                {item.subtitle && (
+                                                    <div className="text-sm text-gray-400 mt-1">
+                                                        {item.subtitle}
+                                                    </div>
+                                                )}
                                             </Link>
                                         </li>
                                     )
@@ -172,7 +179,7 @@ const Navbar = () => {
                                  }}>
                                 <NavLink
                                     href=""
-                                    className="flex items-center justify-center gap-x-1 text-sm text-white font-medium custom-btn-bg border border-gray-500 active:bg-gray-900 transition-all duration-200 hover:scale-105 w-full py-3 rounded-lg hover:bg-white/20"
+                                    className="font-neulis flex items-center justify-center gap-x-1 text-sm text-white font-medium custom-btn-bg border border-gray-500 active:bg-gray-900 transition-all duration-200 hover:scale-105 w-full py-3 rounded-lg hover:bg-white/20"
                                     style={{
                                         backdropFilter: 'blur(10px)',
                                         WebkitBackdropFilter: 'blur(10px)'

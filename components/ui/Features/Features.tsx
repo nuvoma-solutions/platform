@@ -141,12 +141,12 @@ const Features = () => {
             <div className="custom-screen text-gray-300">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.h2
-                        className="text-gray-50 text-3xl font-semibold sm:text-4xl font-neulisalt tracking-tighter"
+                        className="font-neulis-bold text-gray-50 text-3xl sm:text-4xl tracking-tight leading-none"
                         variants={titleVariants}
                     >
                         Backed by{" "}
                         <motion.span
-                            className="bg-gradient-to-br bg-clip-text text-transparent from-blue-400 to-gray-300"
+                            className="font-neulis-bold bg-gradient-to-br bg-clip-text text-transparent from-blue-400 to-gray-300"
                             variants={gradientVariants}
                             whileHover={{
                                 backgroundImage: "linear-gradient(to bottom right, #60A5FA, #E5E7EB, #3B82F6)",
@@ -157,7 +157,7 @@ const Features = () => {
                         </motion.span>
                     </motion.h2>
                     <motion.p
-                        className="mt-3 font-neulisalt"
+                        className="mt-3 font-neulisalt leading-5"
                         variants={textVariants}
                     >
                         We develop innovative technology solutions that set new standards. Our founder team combines

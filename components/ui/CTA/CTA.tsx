@@ -67,10 +67,10 @@ const CTA = () => {
                         variants={containerVariants}
                     >
                         <motion.h2
-                            className="text-gray-50 text-3xl font-semibold sm:text-4xl font-neulisalt tracking-tighter"
+                            className="text-gray-50 text-3xl sm:text-4xl font-neulis-bold leading-none tracking-tight"
                             variants={itemVariants}
                         >
-                            We fulfill your expectations,{" "}
+                            We fulfill your expectations, and then{" "}
                             <motion.span
                                 className={"bg-clip-text text-transparent bg-gradient-to-br from-blue-300 to-blue-500"}
                                 variants={gradientTextVariants}
@@ -79,17 +79,16 @@ const CTA = () => {
                                     transition: { duration: 0.3 }
                                 }}
                             >
-                                and then beyond
-                            </motion.span>{" "}
-                            them
+                                beyond them.
+                            </motion.span>
                         </motion.h2>
 
                         <motion.p
-                            className="mt-3 text-gray-300 font-neulisalt"
+                            className="mt-3 text-gray-300 font-neulisalt leading-5"
                             variants={itemVariants}
                         >
-                            No need to compromise on quality or speed. Our AI-driven solutions are designed to help us
-                            create software for your business that is reliable, so you can focus on what matters most.
+                            No need to compromise on quality or speed. Our work ethic is centered around creating
+                            reliable software for yor business, so you can focus on what matters most.
                         </motion.p>
                     </motion.div>
                 </div>

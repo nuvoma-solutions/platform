@@ -161,20 +161,20 @@ const Hero = () => (
                     .
                 </motion.h3>
 
-                <div className="space-y-5 max-w-4xl text-center px-2 mx-auto">
+                <div className="space-y-5 max-w-5xl text-center px-2 mx-auto">
                     <motion.div
                         className="mx-auto"
                         variants={titleVariants}
                     >
                         <h1
-                            className="font-neulisAlt tracking-tighter leading-none bg-clip-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-transparent font-extrabold md:font-bold font-neulisalt mx-auto"
+                            className="leading-none bg-clip-text text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-transparent font-bold font-neulisalt-bold mx-auto"
                             style={{
                                 backgroundImage: "linear-gradient(179.1deg, #FFFFFF 0.77%, rgba(255, 255, 255, 0) 182.09%)",
                             }}
                         >
                             Finally, software consulting that works
                             <motion.span
-                                className="font-neulis font-extrabold bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent"
+                                className="font-neulis-bold font-bold bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent"
                                 animate={{
                                     backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                                 }}
@@ -192,12 +192,12 @@ const Hero = () => (
 
                     <motion.p
                         variants={fadeUpVariants}
-                        className="max-w-2xl mx-auto text-gray-300 leading-5 md:leading-6 text-sm md:text-base lg:text-lg font-neulisalt"
+                        className="font-neulis-bold max-w-2xl mx-auto text-gray-300 leading-5 md:leading-6 md:text-base lg:text-lg font-neulisalt"
                     >
                         Nuvoma offers comprehensive consulting for entrepreneurs and businesses to build the technology
                         foundation needed for unicorn-level success. Accelerate your growth with{" "}
                         <motion.span
-                            className="font-extrabold italic bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent font-neulis"
+                            className="italic bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent font-neulis-bold"
                             whileHover={{
                                 scale: 1.05,
                                 textShadow: "0 0 20px rgba(59, 130, 246, 0.5)",

@@ -9,8 +9,20 @@ const neulisAlt = localFont({
     display: "swap"
 })
 
+const neulisAltBold = localFont({
+    src: "../public/fonts/NeulisAlt-Bold.otf",
+    variable: "--font-neulisalt-bold",
+    display: "swap"
+});
+
+const neulisBold = localFont({
+    src: "../public/fonts/NeulisCursive-Bold.otf",
+    variable: "--font-neulis-bold",
+    display: "swap"
+})
+
 const neulis = localFont({
-    src: "../public/fonts/Neulis-Regular.otf",
+    src: "../public/fonts/NeulisCursive-Regular.otf",
     variable: "--font-neulis-regular",
     display: "swap"
 })
@@ -28,7 +40,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
     return (
-        <html lang="en" className={`${neulis.variable} ${neulisAlt.variable} bg-gray-900`}>
+        <html lang="en" className={`${neulis.variable} ${neulisAlt.variable} ${neulisAltBold.variable} ${neulisBold.variable} bg-gray-900`}>
             <body>{children}</body>
         </html>
     )

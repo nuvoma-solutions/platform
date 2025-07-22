@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'Neulis Cursive Bold';
+    src: url('../public/fonts/NeulisCursive-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 :root {
     --font-neulis: 'Neulis', sans-serif;
+    --font-neulis-bold: 'Neulis Cursive Bold', sans-serif;
     --font-neulisalt: 'NeulisAlt', sans-serif;
+    --font-neulisalt-bold: "NeulisAlt-Bold", sans-serif;
 }
 
 .custom-screen {
@@ -21,6 +30,14 @@
     font-family: var(--font-neulis);
 }
 
+.font-neulis-bold {
+    font-family: var(--font-neulis-bold);
+}
+
 .font-neulisalt {
     font-family: var(--font-neulisalt);
+}
+
+.font-neulisalt-bold {
+    font-family: var(--font-neulisalt-bold);
 }
